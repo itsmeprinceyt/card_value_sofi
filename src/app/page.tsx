@@ -19,7 +19,8 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-pink-300 h-screen flex justify-center items-center">
+    <div className="bg-pink-300 h-screen flex flex-col justify-center items-center gap-2">
+
       <div className="p-20 rounded-lg bg-pink-200 flex flex-col items-center gap-2">
         <h1 className="font-bold text-4xl ">Card Value Calculator</h1>
         <div>
@@ -54,12 +55,21 @@ export default function Home() {
         </button>
 
         <div className="border-2 p-2 rounded-lg border-red-600 text-2xl font-bold text-red-600">
-  <h2>
-    Card Value: {value} {value > 1 ? 'Wists' : (value === 1 || value === 0) ? 'Wist' : ''}
-  </h2>
-</div>
+          <h2>
+            Card Value: {value} {value > 1 ? 'Wists' : (value === 1 || value === 0) ? 'Wist' : ''}
+          </h2>
+        </div>
 
         <Settings settings={settings} setSettings={setSettings} />
+      </div>
+
+      <div className="p-2 rounded-lg bg-pink-200 flex flex-col items-center gap-2 text-center">
+        Note
+        <div>
+          • This may not give you accurate results.
+          <br></br>
+          • It is advised to use this only for 2D Non-Event Cards.
+        </div>
       </div>
     </div>
   );
