@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className=" antialiased">
+        className="select-none antialiased">
         <Suspense fallback={<Loader/>}>
           {children}
         </Suspense>
